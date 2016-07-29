@@ -1,4 +1,4 @@
-package com.example.githubusers;
+package com.example.githubusers.model;
 
 import com.google.gson.annotations.SerializedName;
 

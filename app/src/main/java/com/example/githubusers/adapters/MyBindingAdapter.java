@@ -1,4 +1,4 @@
-package com.example.githubusers;
+package com.example.githubusers.adapters;
 
 /**
  * Created by Chudofom on 28.07.16.

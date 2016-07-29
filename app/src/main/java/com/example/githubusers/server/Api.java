@@ -1,4 +1,6 @@
-package com.example.githubusers;
+package com.example.githubusers.server;
+
+import com.example.githubusers.model.User;
 
 import java.util.List;
 
