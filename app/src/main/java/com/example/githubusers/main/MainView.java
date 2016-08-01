@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.example.githubusers.MyRecyclerView;
 import com.example.githubusers.R;
 import com.example.githubusers.adapters.RecyclerViewAdapter;
 import com.example.githubusers.model.User;
@@ -47,14 +48,14 @@ public class MainView extends Activity implements IMainView {
 
     @Override
     public void showUsers(List<User> users) {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        MyRecyclerView recyclerView = (MyRecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(users);
-        recyclerView.smoothScrollToPosition(recyclerView.getBaseline());
-        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(itemAnimator);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(users);
+        recyclerView.setAdapter(adapter);
     }
 
 }
